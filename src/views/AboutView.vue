@@ -1,5 +1,9 @@
+<script setup lang="ts">
+  import '@material/web/button/outlined-button.js';
+</script>
 <template>
   <div class="about-container">
+    <md-outlined-button>Back</md-outlined-button>
     <div class="about-body">
       <img alt="Profile Picture" class="about-picture" id="profPic" src="@/assets/Max_RMBL.JPG"/>
       <div class="about-blur-text-backdrop"></div>

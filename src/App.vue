@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import HamburgerMenu from "./navigation/HamburgerMenu.vue";
-import Banner from "./components/Banner.vue"
-import Socials from "./components/Socials.vue"
+import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue"
 import { RouterView } from 'vue-router'
 </script>
 
 <template>
   <header>
-    <HamburgerMenu class="hamburger"/>
-    <Banner class="banner"/>
-    <Socials class="socials"/>
+    <Header/>
   </header>
   <div class="page-container">
     <RouterView class="router-outlet"/>
@@ -43,23 +39,5 @@ header {
   flex-shrink: 0;
   height: 6vh;
   width: 100%;
-}
-
-.hamburger {
-  grid-column: 1 / 2;
-  justify-self: center;
-  align-self: center;
-}
-
-.banner {
-  grid-column: 2 / 3;
-  justify-self: center;
-  align-self: center;
-}
-
-.socials {
-  grid-column: 3 / 4;
-  justify-self: center;
-  align-self: center;
 }
 </style>

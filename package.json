@@ -19,9 +19,12 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@material/web": "^2.3.0",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@types/axios": "^0.14.0",
     "axios": "^1.5.0",
     "pinia": "^2.1.6",
+    "rollup": "^4.44.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
   },
