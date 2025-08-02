@@ -1,65 +1,30 @@
 <script setup lang="ts">
-import HamburgerMenu from "./navigation/HamburgerMenu.vue";
-import Banner from "./components/Banner.vue"
-import Socials from "./components/Socials.vue"
-import Footer from "./components/Footer.vue"
-import { RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <HamburgerMenu class="hamburger"/>
-    <Banner class="banner"/>
-    <Socials class="socials"/>
-  </header>
-  <div class="page-container">
-    <RouterView class="router-outlet"/>
-    <Footer class="footer-container"/>
+  <div>
+    <a href="https://vite.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+    </a>
   </div>
+  <HelloWorld msg="Vite + Vue" />
 </template>
 
 <style scoped>
-header {
-  width:100%;
-  line-height: 1.5;
-  min-height: 8vh;
-  background-color: var(--color-background-header);
-  display: grid;
-  grid-template-columns: 80px 1fr 80px;
-  grid-template-rows: 1fr;
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
 }
-
-.page-container {
-  display: flex;
-  flex-direction: column;
-  min-height: 92vh;
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
 }
-
-.router-outlet {
-  flex: 1 0 auto;
-}
-
-.footer-container {
-  flex-shrink: 0;
-  height: 6vh;
-  width: 100%;
-}
-
-.hamburger {
-  grid-column: 1 / 2;
-  justify-self: center;
-  align-self: center;
-}
-
-.banner {
-  grid-column: 2 / 3;
-  justify-self: center;
-  align-self: center;
-}
-
-.socials {
-  grid-column: 3 / 4;
-  justify-self: center;
-  align-self: center;
+.logo.vue:hover {
+  filter: drop-shadow(0 0 2em #42b883aa);
 }
 </style>
