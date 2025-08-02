@@ -1,23 +1,36 @@
 <script setup lang="ts">
-  import DarkMode from './components/DarkMode.vue'
+  import AppSidebar from '@/components/AppSidebar.vue'
+  import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar'
+  import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 </script>
 <template>
-  <div class="bg-background text-foreground" >
-    <DarkMode/>
-  </div>
+  <SidebarProvider>
+    <AppSidebar />
+    <main>
+      <SidebarTrigger />
+      <Card>
+        <CardHeader>
+          <CardTitle>Card Title</CardTitle>
+          <CardDescription>Card Description</CardDescription>
+        </CardHeader>
+        <CardContent>
+          Card Content
+        </CardContent>
+        <CardFooter>
+          Card Footer
+        </CardFooter>
+      </Card>
+      <RouterView />
+    </main>
+  </SidebarProvider>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
 </style>
