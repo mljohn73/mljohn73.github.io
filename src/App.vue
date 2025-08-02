@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import DarkMode from './components/DarkMode.vue'
-  var a = 0;
 </script>
 <template>
   <div class="bg-background text-foreground" >
